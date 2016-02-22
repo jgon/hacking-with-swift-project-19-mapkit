@@ -30,7 +30,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
         let dequeueIdentifier = "Capital"
         
-        if annotation.isKindOfClass(Capital.self) {
+        if annotation.isKindOfClass(Capital) {
             
             var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(dequeueIdentifier)
             
