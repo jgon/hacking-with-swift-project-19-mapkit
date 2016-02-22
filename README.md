@@ -14,3 +14,19 @@ On startup the application crashes with the following exception:
 
 This exception is thrown after renaming ```Capital.title``` property to ```Capital.name```.
 But the ```MKAnnotation``` protocol requires a ```title``` property.
+
+### Using a detail view controller instead of an alert controller
+
+As an alternative to show a view controller with a parent controller embedded in a navigation controller:
+
+```
+let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+let detailViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+detailViewController.capital = capital
+self.navigationController?.pushViewController(detailViewController, animated: true)
+```
+
+
+![](/Images/map view.png)
+
+![](/Images/detail view.png)
