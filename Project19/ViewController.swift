@@ -26,11 +26,35 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.addAnnotations([london, oslo, paris, rome, washington])
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+
+        let dequeueIdentifier = "Capital"
+        
+        if annotation.isKindOfClass(Capital.self) {
+            
+            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(dequeueIdentifier)
+            
+            if annotationView == nil {
+                
+                // Need to create a new annotation view and set detail button.
+                
+                // Take care to use MKPinAnnotationView instead of MKAnnotationView else no pin will be displayed.
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: dequeueIdentifier)
+                annotationView!.canShowCallout = true
+                
+                let detailButton = UIButton(type: .DetailDisclosure)
+                annotationView!.rightCalloutAccessoryView = detailButton
+            } else {
+                
+                // Set annotation to reused annotation view.
+                
+                annotationView!.annotation = annotation
+            }
+            return annotationView
+        }
+        
+        // It's not a Capital annotation. Let MapKit handle the event by returning nil.
+        return nil
     }
-
-
 }
 
