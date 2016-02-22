@@ -59,12 +59,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let capital = view.annotation as! Capital
-        let capitalTitle = capital.title
-        let capitalInfo = capital.info
-
-        let alertController = UIAlertController(title: capitalTitle, message: capitalInfo, preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        presentViewController(alertController, animated: true, completion: nil)
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+        detailViewController.capital = capital
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -37,6 +38,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1732" y="321"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="PSO-3a-AjZ">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="e09-8m-6YG" userLabel="Detail View Controller" customClass="DetailViewController" customModule="Project19" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tPH-sv-r62"/>
+                        <viewControllerLayoutGuide type="bottom" id="HHl-VQ-ZtA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nsp-M4-doc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital detail info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okS-D8-Srq">
+                                <rect key="frame" x="200" y="91" width="201" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="QNr-Sq-hyH"/>
+                                    <constraint firstAttribute="height" constant="29" id="WRp-js-Wf7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WRp-js-Wf7"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Capital name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yn5-dc-gMV">
+                                <rect key="frame" x="20" y="155" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYj-Dd-M7I">
+                                <rect key="frame" x="20" y="190" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4KZ-vb-9kC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XYj-Dd-M7I" firstAttribute="leading" secondItem="Yn5-dc-gMV" secondAttribute="leading" id="8Le-nV-l2E"/>
+                            <constraint firstItem="okS-D8-Srq" firstAttribute="top" secondItem="tPH-sv-r62" secondAttribute="bottom" constant="65" id="QSL-EP-dty"/>
+                            <constraint firstItem="okS-D8-Srq" firstAttribute="centerX" secondItem="nsp-M4-doc" secondAttribute="centerX" id="UAk-0L-Bfk"/>
+                            <constraint firstItem="okS-D8-Srq" firstAttribute="top" secondItem="tPH-sv-r62" secondAttribute="bottom" constant="71" id="a6o-qe-TLf"/>
+                            <constraint firstItem="Yn5-dc-gMV" firstAttribute="centerX" secondItem="nsp-M4-doc" secondAttribute="centerX" id="bYg-wE-zZg"/>
+                            <constraint firstItem="XYj-Dd-M7I" firstAttribute="leading" secondItem="nsp-M4-doc" secondAttribute="leadingMargin" id="iAw-hk-eht"/>
+                            <constraint firstItem="HHl-VQ-ZtA" firstAttribute="top" secondItem="XYj-Dd-M7I" secondAttribute="bottom" constant="389" id="tV3-rb-8RM"/>
+                            <constraint firstItem="XYj-Dd-M7I" firstAttribute="top" secondItem="Yn5-dc-gMV" secondAttribute="bottom" constant="14" id="uF8-wX-R9O"/>
+                            <constraint firstItem="XYj-Dd-M7I" firstAttribute="trailing" secondItem="Yn5-dc-gMV" secondAttribute="trailing" id="v0C-TT-uWF"/>
+                            <constraint firstItem="Yn5-dc-gMV" firstAttribute="top" secondItem="okS-D8-Srq" secondAttribute="bottom" constant="35" id="xMv-ip-36v"/>
+                            <constraint firstItem="okS-D8-Srq" firstAttribute="centerY" secondItem="nsp-M4-doc" secondAttribute="centerY" id="zag-JA-UnI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QSL-EP-dty"/>
+                                <exclude reference="zag-JA-UnI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="capitalInfo" destination="XYj-Dd-M7I" id="XO7-S7-eLK"/>
+                        <outlet property="capitalName" destination="Yn5-dc-gMV" id="F2Y-JK-tx4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRB-nh-Zhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2393" y="321"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gH7-aV-c9I">

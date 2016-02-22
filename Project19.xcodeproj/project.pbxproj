@@ -14,6 +14,7 @@
 		C411A85B1C78E9D100FC0708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C411A8591C78E9D100FC0708 /* LaunchScreen.storyboard */; };
 		C411A8641C7B776800FC0708 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C411A8631C7B776800FC0708 /* MapKit.framework */; };
 		C411A8661C7B78B500FC0708 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411A8651C7B78B500FC0708 /* Capital.swift */; };
+		C411A86A1C7BA7A700FC0708 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411A8691C7BA7A700FC0708 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C411A8621C78E9EC00FC0708 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C411A8631C7B776800FC0708 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C411A8651C7B78B500FC0708 /* Capital.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
+		C411A8691C7BA7A700FC0708 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C411A8591C78E9D100FC0708 /* LaunchScreen.storyboard */,
 				C411A85C1C78E9D100FC0708 /* Info.plist */,
 				C411A8651C7B78B500FC0708 /* Capital.swift */,
+				C411A8691C7BA7A700FC0708 /* DetailViewController.swift */,
 			);
 			path = Project19;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				C411A8531C78E9D100FC0708 /* ViewController.swift in Sources */,
 				C411A8511C78E9D100FC0708 /* AppDelegate.swift in Sources */,
 				C411A8661C7B78B500FC0708 /* Capital.swift in Sources */,
+				C411A86A1C7BA7A700FC0708 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
