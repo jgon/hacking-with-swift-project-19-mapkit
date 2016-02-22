@@ -56,5 +56,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         // It's not a Capital annotation. Let MapKit handle the event by returning nil.
         return nil
     }
+    
 }
 

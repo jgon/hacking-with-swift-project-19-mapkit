@@ -11,8 +11,12 @@ import MapKit
 
 class Capital: NSObject,  MKAnnotation {
 
+    // A property with the name 'title' is required by the MKAnnotation protocol.
     var title: String?
+    
+    // A property with the name 'coordinate' is required by the MKAnnotation protocol.
     var coordinate: CLLocationCoordinate2D
+    
     var info: String
     
     init(title: String, coordinate: CLLocationCoordinate2D, info: String) {
